@@ -1,0 +1,56 @@
+.table {
+  display: block;
+  border: 1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tr {
+  display: flex;
+}
+
+.th,
+.td {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.th {
+  background: #f9f9f9;
+  position: relative;
+}
+
+.tbody .tr:not(:last-child) {
+  border-bottom: none;
+}
+
+.resizer {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  z-index: 1;
+  touch-action: none;
+  background: #ddd;
+  cursor: col-resize;
+}
+
+.empty-table {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+
+.left-aligned {
+  text-align: left;
+}
+
+.right-aligned {
+  text-align: right;
+}
